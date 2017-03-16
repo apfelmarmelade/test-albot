@@ -100,10 +100,10 @@ exports.handle = function handle(client) {
     classifications: {
       goodbye: 'goodbye',
       greeting: 'greeting',
-      gQ1: 'in_num1/q1'
-      gQ2: 'in_num1/q2'
-      gQ3: 'in_num1/q3'
-      gQ4: 'in_num1/q4'
+      gQ1: 'in_num1/q1',
+      gQ2: 'in_num1/q2',
+      gQ3: 'in_num1/q3',
+      gQ4: 'in_num1/q4',
     },
     streams: {
       main: 'onboarding',
