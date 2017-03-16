@@ -72,7 +72,7 @@ exports.handle = function handle(client) {
     streams: {
       goodbye: handleGoodbye,
       greeting: handleGreeting,
-      gQ1: handleQ1,
+      gQ1: [handleQ1],
       main: 'onboarding',
       onboarding: [sayHello],
       end: [untrained]
