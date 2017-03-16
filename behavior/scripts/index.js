@@ -52,29 +52,15 @@ exports.handle = function handle(client) {
     }
   })
 
-  const handleQ1 = client.createStep({
-    satisfied() {
-      return false
-    },
-
-    prompt() {
-      client.addResponse('out_num1/Q1')
-     client.done()
-    }
-  })
-
-
   client.runFlow({
     classifications: {
       goodbye: 'goodbye',
-      greeting: 'greeting',
-      getQ1: 'in_num1/Q1'
+      greeting: 'greeting'
     },
     streams: {
       goodbye: handleGoodbye,
       greeting: handleGreeting,
-      getQ1: handleQ1,
-      main: 'greeting',
+      main: 'onboarding',
       onboarding: [sayHello],
       end: [untrained]
     }
