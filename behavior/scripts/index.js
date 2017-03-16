@@ -52,6 +52,39 @@ exports.handle = function handle(client) {
     }
   })
 
+  const collectCity = client.createStep({
+    satisfied() {
+      return Boolean(client.getConversationState().weatherCity)
+  },
+
+    prompt() {
+    // Need to prompt user for city
+      console.log('Need to ask user for city')
+      client.done()
+    },
+  })
+
+  const provideWeather = client.createStep({
+    satisfied() {
+      return false
+    },
+
+  prompt() {
+    // Need to provide weather
+    client.done()
+  },
+})
+
+/**  client.runFlow({
+    classifications: {},
+    streams: {
+      main: 'hi',
+      hi: [sayHello],
+      getWeather: [collectCity, provideWeather],
+    }
+  }) **/
+
+
   client.runFlow({
     classifications: {
       goodbye: 'goodbye',
@@ -60,7 +93,8 @@ exports.handle = function handle(client) {
     streams: {
       goodbye: handleGoodbye,
       greeting: handleGreeting,
-      main: 'onboarding',
+      getWeather: [collectCity, provideWeather],
+      main: 'getWeather',
       onboarding: [sayHello],
       end: [untrained]
     }
