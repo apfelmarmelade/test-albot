@@ -67,7 +67,8 @@ exports.handle = function handle(client) {
   client.runFlow({
     classifications: {
       goodbye: 'goodbye',
-      greeting: 'greeting'
+      greeting: 'greeting',
+      getQ1: 'in_num1/Q1'
     },
     streams: {
       goodbye: handleGoodbye,
