@@ -58,7 +58,7 @@ exports.handle = function handle(client) {
     },
 
     prompt() {
-      client.addResponse('out_num1/Q1')
+      client.addResponse('out_num1/q1')
      client.done()
     }
   })
@@ -67,7 +67,7 @@ exports.handle = function handle(client) {
     classifications: {
       goodbye: 'goodbye',
       greeting: 'greeting',
-      gQ1: 'in_num1/Q1'
+      gQ1: 'in_num1/q1'
     },
     streams: {
       main: 'gQ1',
