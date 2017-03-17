@@ -102,7 +102,7 @@ exports.handle = function handle(client) {
     },
 
     prompt() {
-      client.addResponse('out_num1/q4')
+      client.addResponse('out_num1')
      client.done()
     }
   })
@@ -115,6 +115,7 @@ exports.handle = function handle(client) {
       gQ2: 'in_num1/q2',
       gQ3: 'in_num1/q3',
       gQ4: 'in_num1/q4',
+      g1: 'in_num1'
     },
     streams: {
       main: 'g1'
