@@ -115,7 +115,7 @@ exports.handle = function handle(client) {
       gQ3: handleQ3,
       gQ4: handleQ4,
       onboarding: [sayHello],
-      end: [untrained]
+//      end: [untrained]
     }
   })
 }
