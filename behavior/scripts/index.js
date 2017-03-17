@@ -115,18 +115,18 @@ exports.handle = function handle(client) {
       gq2: 'in_num1/q2',
       gq3: 'in_num1/q3',
       gq4: 'in_num1/q4'
-  //    g1: 'in_num1'
+  //  g1: 'in_num1'
     },
     streams: {
       main: 'onboarding'
       goodbye: handleGoodbye,
       greeting: handleGreeting,
-//      g1: handle1,
+//    g1: handle1,
       gq1: handleq1,
       gq2: handleq2,
       gq3: handleq3,
       gq4: handleq4,
-      onboarding: ['gq1', 'gq2', 'gq3', 'gq4']
+      onboarding: ['gq1', 'gq2', 'gq3', 'gq4'],
       end: [untrained]
     }
   })
