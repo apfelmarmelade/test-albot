@@ -96,6 +96,17 @@ exports.handle = function handle(client) {
     }
   })
 
+  const handle1 = client.createStep({
+    satisfied() {
+      return false
+    },
+
+    prompt() {
+      client.addResponse('out_num1/q4')
+     client.done()
+    }
+  })
+
   client.runFlow({
     classifications: {
       goodbye: 'goodbye',
@@ -106,9 +117,10 @@ exports.handle = function handle(client) {
       gQ4: 'in_num1/q4',
     },
     streams: {
-      main: 'gQ1'
+      main: 'g1'
       goodbye: handleGoodbye,
       greeting: handleGreeting,
+      g1: handle1,
       gQ1: handleQ1,
       gQ2: handleQ2,
       gQ3: handleQ3,
