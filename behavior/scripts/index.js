@@ -106,7 +106,7 @@ exports.handle = function handle(client) {
       gQ4: 'in_num1/q4',
     },
     streams: {
-      main: 'handleGreeting',
+      main: 'greeting',
       goodbye: handleGoodbye,
       greeting: handleGreeting,
       gQ1: handleQ1,
