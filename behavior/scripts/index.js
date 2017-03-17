@@ -96,7 +96,7 @@ exports.handle = function handle(client) {
     }
   })
 
-  const handle1 = client.createStep({
+/*  const handle1 = client.createStep({
     satisfied() {
       return false
     },
@@ -105,7 +105,7 @@ exports.handle = function handle(client) {
       client.addResponse('out_num1')
      client.done()
     }
-  })
+  }) */
 
   client.runFlow({
     classifications: {
@@ -114,19 +114,19 @@ exports.handle = function handle(client) {
       gQ1: 'in_num1/q1',
       gQ2: 'in_num1/q2',
       gQ3: 'in_num1/q3',
-      gQ4: 'in_num1/q4',
-      g1: 'in_num1'
+      gQ4: 'in_num1/q4'
+  //    g1: 'in_num1'
     },
     streams: {
       main: 'gQ1'
       goodbye: handleGoodbye,
       greeting: handleGreeting,
-      g1: handle1,
+//      g1: handle1,
       gQ1: handleQ1,
       gQ2: handleQ2,
       gQ3: handleQ3,
       gQ4: handleQ4,
-      onboarding: [sayHello],
+      onboarding: [sayHello]
 //      end: [untrained]
     }
   })
