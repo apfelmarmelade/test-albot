@@ -109,13 +109,12 @@ exports.handle = function handle(client) {
       main: 'gQ1'
       goodbye: handleGoodbye,
       greeting: handleGreeting,
-      qQ: [handleQ1, handleQ2, handleQ3, handleQ4],
       gQ1: handleQ1,
       gQ2: handleQ2,
       gQ3: handleQ3,
       gQ4: handleQ4,
       onboarding: [sayHello],
-//      end: [untrained]
+      end: [untrained]
     }
   })
 }
