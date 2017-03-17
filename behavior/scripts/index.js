@@ -52,7 +52,7 @@ exports.handle = function handle(client) {
     }
   })
 
-  const handleQ1 = client.createStep({
+  const handleq1 = client.createStep({
     satisfied() {
       return false
     },
@@ -63,7 +63,7 @@ exports.handle = function handle(client) {
     }
   })
 
-  const handleQ2 = client.createStep({
+  const handleq2 = client.createStep({
     satisfied() {
       return false
     },
@@ -74,7 +74,7 @@ exports.handle = function handle(client) {
     }
   })
 
-  const handleQ3 = client.createStep({
+  const handleq3 = client.createStep({
     satisfied() {
       return false
     },
@@ -85,7 +85,7 @@ exports.handle = function handle(client) {
     }
   })
 
-  const handleQ4 = client.createStep({
+  const handleq4 = client.createStep({
     satisfied() {
       return false
     },
@@ -111,10 +111,10 @@ exports.handle = function handle(client) {
     classifications: {
       goodbye: 'goodbye',
       greeting: 'greeting',
-      gQ1: 'in_num1/q1',
-      gQ2: 'in_num1/q2',
-      gQ3: 'in_num1/q3',
-      gQ4: 'in_num1/q4'
+      gq1: 'in_num1/q1',
+      gq2: 'in_num1/q2',
+      gq3: 'in_num1/q3',
+      gq4: 'in_num1/q4'
   //    g1: 'in_num1'
     },
     streams: {
@@ -122,10 +122,10 @@ exports.handle = function handle(client) {
       goodbye: handleGoodbye,
       greeting: handleGreeting,
 //      g1: handle1,
-      gQ1: handleQ1,
-      gQ2: handleQ2,
-      gQ3: handleQ3,
-      gQ4: handleQ4,
+      gq1: handleq1,
+      gq2: handleq2,
+      gq3: handleq3,
+      gq4: handleq4,
       onboarding: [sayHello]
       end: [untrained]
     }
